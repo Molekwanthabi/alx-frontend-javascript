@@ -54,15 +54,11 @@ class Teacher implements TeacherInterface {
 // createEmployee function
 // ---------------------------------------------
 function createEmployee(salary: number | string): Director | Teacher {
-  if ((typeof salary === 'number' && salary < 500) || salary === '$500') {
+  if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
-  } else if (typeof salary === 'number' && salary >= 500) {
-    return new Director();
-  } else if (typeof salary === 'string') {
+  } else {
     return new Director();
   }
-  // fallback, though TypeScript already ensures salary is number|string
-  throw new Error('Invalid salary');
 }
 
 // ---------------------------------------------
@@ -71,3 +67,4 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200));    // Teacher
 console.log(createEmployee(1000));   // Director
 console.log(createEmployee('$500')); // Director
+
