@@ -96,7 +96,6 @@ console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 // ---------------------------------------------
 // Task 7: String literal types
 // ---------------------------------------------
-
 // String literal type for subjects
 export type Subjects = 'Math' | 'History';
 
@@ -107,17 +106,11 @@ export function teachClass(todayClass: Subjects): string {
   } else if (todayClass === 'History') {
     return 'Teaching History';
   }
-  // fallback (TypeScript ensures this is never reached)
   return '';
 }
 
-// ---------------------------------------------
 // Example usage
-// ---------------------------------------------
-console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
-console.log(teachClass('Math'));                 // Teaching Math
-console.log(teachClass('History'));              // Teaching History
+console.log(teachClass('Math'));     // Teaching Math
+console.log(teachClass('History'));  // Teaching History
 
-
-
+// String literal type for subjects
