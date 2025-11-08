@@ -100,7 +100,7 @@ console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 export type Subjects = 'Math' | 'History';
 
 // Function teachClass that returns a string based on todayClass
-export function teachClass("todayClass: Subjects"): string {
+export function teachClass(todayClass: Subjects): string {
   if (todayClass === 'Math') {
     return 'Teaching Math';
   } else if (todayClass === 'History') {
@@ -110,6 +110,8 @@ export function teachClass("todayClass: Subjects"): string {
 }
 
 // Example usage
+console.log(executeWork(createEmployee(200)));   // Getting to work
+console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
 console.log(teachClass('Math'));     // Teaching Math
 console.log(teachClass('History'));  // Teaching History
 
