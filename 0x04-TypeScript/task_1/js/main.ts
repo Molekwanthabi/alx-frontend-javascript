@@ -1,4 +1,4 @@
-// Define Teacher interface
+ // Define Teacher interface
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -8,7 +8,7 @@ interface Teacher {
   [key: string]: any; // Allows extra properties like 'contract'
 }
 
-// Example: Create a Teacher object
+// Example: Teacher object
 const teacher3: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
@@ -19,12 +19,12 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
-// Extend Teacher interface
+// Extend Teacher interface → Director
 interface Director extends Teacher {
   numberOfReports: number;
 }
 
-// Example: Create a Director object
+// Example: Director object
 const director1: Director = {
   firstName: 'Jane',
   lastName: 'Smith',
@@ -35,14 +35,20 @@ const director1: Director = {
 
 console.log(director1);
 
+// ---------------------------------------------
+// Task 3: Printing teachers
+// ---------------------------------------------
+
+// Interface for the printTeacher function
 interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-// Implement the function
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
+// Function definition using standard syntax
+function printTeacher(firstName: string, lastName: string): string {
+  return `${firstName}. ${lastName}`;
+}
 
 // Example usage
-console.log(printTeacher("John", "Doe")); // Output: J. Doe
+console.log(printTeacher('John', 'Doe')); // Output: J. Doe
+
