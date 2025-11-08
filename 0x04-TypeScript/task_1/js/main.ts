@@ -52,3 +52,20 @@ function printTeacher(firstName: string, lastName: string): string {
 // Example usage
 console.log(printTeacher('John', 'Doe')); // Output: J. Doe
 
+{
+  firstName: 'John',
+  fullTimeEmployee: false,
+  lastName: 'Doe',
+  location: 'London',
+  contract: false
+}
+{
+  firstName: 'Jane',
+  lastName: 'Smith',
+  location: 'Paris',
+  fullTimeEmployee: true,
+  numberOfReports: 17
+}
+John. Doe
+
+
